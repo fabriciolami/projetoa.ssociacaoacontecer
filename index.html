@@ -1,0 +1,641 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Associação Acontecer</title>
+
+    <!-- Tailwind -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- FullCalendar CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.15/main.min.css"
+      rel="stylesheet"
+    />
+
+    <!-- FullCalendar JS -->
+    <script src="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.15/index.global.min.js"></script>
+
+    <style>
+      #calendar {
+        max-width: 900px;
+        margin: 40px auto;
+        background: white;
+        padding: 20px;
+        border-radius: 12px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      }
+    </style>
+  </head>
+
+  <body class="antialiased">
+    <!-- Navbar -->
+    <nav class="bg-white shadow-lg fixed w-full z-10">
+      <div
+        class="container mx-auto px-6 py-4 flex justify-between items-center"
+      >
+        <a href="#" class="text-2xl font-bold text-red-500">
+          <span class="text-black">Associação</span> Acontecer
+        </a>
+        <div class="flex items-center space-x-4">
+          <a
+            href="#quem-somos"
+            class="text-gray-700 hover:text-green-500 font-medium"
+            >Quem somos</a
+          >
+          <a
+            href="#programas"
+            class="text-gray-700 hover:text-green-500 font-medium"
+            >Programas Sociais</a
+          >
+          <a
+            href="#agenda"
+            class="text-gray-700 hover:text-green-500 font-medium"
+            >Agenda</a
+          >
+          <a
+            href="#galeria"
+            class="text-gray-700 hover:text-green-500 font-medium"
+            >Galeria</a
+          >
+          <a
+            href="#contato"
+            class="text-gray-700 hover:text-green-500 font-medium"
+            >Contato</a
+          >
+          <a
+            href="#doacoes"
+            class="text-gray-700 hover:text-green-500 font-medium"
+            >Doações</a
+          >
+        </div>
+      </div>
+    </nav>
+
+    <!-- Seção Principal (Hero) -->
+    <header
+      id="hero"
+      class="hero text-white min-h-[60vh] flex items-center justify-center text-center bg-[url('imagens/fundo.jpg')] bg-cover bg-center mt-10"
+    >
+      <div class="p-6 md:p-5 rounded-lg bg-gray-900/40 backdrop-blur-sm">
+        <h1
+          class="text-4xl md:text-6xl font-extrabold leading-tight tracking-wide"
+        >
+          Associação Acontecer Tecendo Vidas
+        </h1>
+        <p class="mt-4 text-lg md:text-xl max-w-2xl mx-auto">
+          "ONG sem fins lucrativos que apoia crianças, adolescentes e adultos a
+          trabalhar a educação, os valores sociais e a restaurar a visão de
+          futuro.."
+        </p>
+        <a
+          href="#programas"
+          class="mt-8 inline-block bg-green-500 hover:bg-green-600 text-white font-bold py-3 px-8 rounded-full shadow-lg transition duration-500"
+        >
+          Conheça Nossos Projetos
+        </a>
+      </div>
+    </header>
+
+    <!-- Seção Quem Somos -->
+    <section id="quem-somos" class="py-20 bg-white">
+      <div class="container mx-auto px-6">
+        <h2 class="text-4xl font-bold text-center mb-12 text-green-700">
+          Quem Somos
+        </h2>
+        <div
+          class="max-w-4xl mx-auto text-lg text-gray-700 leading-relaxed space-y-6"
+        >
+          <p>
+            A Associação Acontecer Tecendo Vidas foi fundada em 2008 com o
+            objetivo de trabalhar a educação, os valores sociais e restaurar a
+            visão de futuro. A Associação atende gratuitamente crianças, jovens
+            e adultos nas modalidades de judô, jiu-jitsu, ballet, ginástica,
+            dança, teclado, violão, futebol, reforço escolar, acompanhamento
+            social, psicológico e oficina de costura.
+          </p>
+          <div class="grid md:grid-cols-2 gap-8 mt-10">
+            <div>
+              <h3 class="text-2xl font-semibold mb-2 text-green-800">Missão</h3>
+              <p>
+                Educar para a vida, crianças e adolescentes, favorecendo o
+                desenvolvimento integral e o exercício da cidadania.
+              </p>
+            </div>
+            <div>
+              <h3 class="text-2xl font-semibold mb-2 text-green-800">Visão</h3>
+              <p>
+                Ser referência no atendimento e valorização humana das crianças
+                e adolescentes, restaurando a visão de futuro e fortalecendo os
+                vínculos familiares.
+              </p>
+            </div>
+            <div class="md:col-span-2">
+              <h3 class="text-2xl font-semibold mb-2 text-green-800">
+                Valores
+              </h3>
+              <p>
+                Ética, respeito, comprometimento, esperança, determinação,
+                credibilidade, responsabilidade, transparência, confiança,
+                cidadania, inclusão e responsabilidade social, igualdade de
+                oportunidades e diversidade.
+              </p>
+            </div>
+            <div class="md:col-span-2">
+              <h3 class="text-2xl font-semibold mb-2 text-green-800">
+                Propósito
+              </h3>
+              <p>
+                Poder contribuir para que essas crianças e jovens voltem a
+                sonhar e se mantenham ocupados com atividades que talvez não os
+                tornem profissionais, mas que possivelmente ajudarão a se
+                tornarem seres humanos ainda melhores.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Seção de Programas Sociais -->
+    <section id="programas" class="py-20 bg-gray-50">
+      <div class="container mx-auto px-6">
+        <h2 class="text-4xl font-bold text-center mb-12 text-green-700">
+          Nossos Programas Sociais
+        </h2>
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-10">
+          <!-- Cartão de Programas 1: Artes Marciais -->
+          <div
+            class="bg-white rounded-xl shadow-lg p-8 transform hover:scale-105 transition duration-300"
+          >
+            <h3 class="text-2xl font-semibold mb-4 text-gray-800">
+              Artes Marciais
+            </h3>
+            <ul class="list-disc list-inside space-y-2 text-gray-600">
+              <li>Judô</li>
+              <li>Jiu-jitsu</li>
+            </ul>
+          </div>
+          <!-- Cartão de Programas 2: Musicalização -->
+          <div
+            class="bg-white rounded-xl shadow-lg p-8 transform hover:scale-105 transition duration-300"
+          >
+            <h3 class="text-2xl font-semibold mb-4 text-gray-800">
+              Musicalização
+            </h3>
+            <ul class="list-disc list-inside space-y-2 text-gray-600">
+              <li>Violão</li>
+              <li>Teclado</li>
+              <li>Bateria</li>
+            </ul>
+          </div>
+          <!-- Cartão de Programas 3: Esportes -->
+          <div
+            class="bg-white rounded-xl shadow-lg p-8 transform hover:scale-105 transition duration-300"
+          >
+            <h3 class="text-2xl font-semibold mb-4 text-gray-800">Esportes</h3>
+            <ul class="list-disc list-inside space-y-2 text-gray-600">
+              <li>Escolinha de futebol</li>
+            </ul>
+          </div>
+          <!-- Cartão de Programas 4: Arte / Dança -->
+          <div
+            class="bg-white rounded-xl shadow-lg p-8 transform hover:scale-105 transition duration-300"
+          >
+            <h3 class="text-2xl font-semibold mb-4 text-gray-800">
+              Arte / Dança
+            </h3>
+            <ul class="list-disc list-inside space-y-2 text-gray-600">
+              <li>Ballet</li>
+              <li>Dança</li>
+              <li>Ginástica</li>
+              <li>Teatro</li>
+            </ul>
+          </div>
+          <!-- Cartão de Programas 5: Oficina para adultos -->
+          <div
+            class="bg-white rounded-xl shadow-lg p-8 transform hover:scale-105 transition duration-300"
+          >
+            <h3 class="text-2xl font-semibold mb-4 text-gray-800">
+              Oficina para adultos
+            </h3>
+            <ul class="list-disc list-inside space-y-2 text-gray-600">
+              <li>Tear (fazer tapetes)</li>
+              <li>Oficina de costura</li>
+              <li>Ginástica localizada</li>
+            </ul>
+          </div>
+          <!-- Cartão de Programas 6: Educação -->
+          <div
+            class="bg-white rounded-xl shadow-lg p-8 transform hover:scale-105 transition duration-300"
+          >
+            <h3 class="text-2xl font-semibold mb-4 text-gray-800">Educação</h3>
+            <ul class="list-disc list-inside space-y-2 text-gray-600">
+              <li>Reforço escolar</li>
+              <li>Fortalecimento de vínculo</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Seção de Agenda de Eventos -->
+    <section id="agenda" class="py-20 bg-green-50">
+      <div class="container mx-auto px-6">
+        <h2 class="text-4xl font-bold text-center mb-12 text-green-700">
+          Agenda de Eventos
+        </h2>
+
+        <!-- Calendário -->
+        <div id="calendar" class="bg-white rounded-xl shadow-lg p-6"></div>
+      </div>
+    </section>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const calendarEl = document.getElementById("calendar");
+        const calendar = new FullCalendar.Calendar(calendarEl, {
+          initialView: "dayGridMonth",
+          locale: "pt-br", // meses e dias em português
+          headerToolbar: {
+            left: "prev,next today", // setas e botão Hoje
+            center: "title",
+            right: "dayGridMonth,timeGridWeek,timeGridDay",
+          },
+          buttonText: {
+            today: "Hoje",
+            month: "Mês",
+            week: "Semana",
+            day: "Dia",
+            list: "Lista",
+          },
+          events: [
+            { title: "Palestra de Tecnologia", start: "2025-09-15" },
+            { title: "Hackathon Local", start: "2025-09-20" },
+            { title: "Oficina de Horta Comunitária", start: "2025-09-22" },
+            { title: "Aulão de Yoga no Parque", start: "2025-10-05" },
+            { title: "Palestra sobre Saúde Mental", start: "2025-10-18" },
+          ],
+          height: "auto",
+          navLinks: true, // permite clicar nos dias para detalhes
+          dayMaxEvents: true, // mostra "+n" se houver muitos eventos no mesmo dia
+        });
+        calendar.render();
+      });
+    </script>
+
+    <!-- Seção de Galeria -->
+    <section id="galeria" class="py-20 bg-gray-50">
+      <div class="container mx-auto px-6">
+        <h2 class="text-4xl font-bold text-center mb-12 text-green-700">
+          Galeria de Fotos
+        </h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <!-- Galeria de Fotos -->
+
+          <div class="rounded-xl overflow-hidden shadow-lg">
+            <img src="imagens/img.1.jpeg" class="w-full h-auto" />
+          </div>
+
+          <div class="rounded-xl overflow-hidden shadow-lg">
+            <img
+              src="imagens/img.2.jpeg"
+              class="w-full h-auto cursor-pointer gallery-image"
+            />
+          </div>
+
+          <div class="rounded-xl overflow-hidden shadow-lg">
+            <img
+              src="imagens/img.3.jpeg"
+              class="w-full h-auto cursor-pointer gallery-image"
+            />
+          </div>
+
+          <div class="rounded-xl overflow-hidden shadow-lg">
+            <img
+              src="imagens/img.4.jpeg"
+              class="w-full h-auto cursor-pointer gallery-image"
+            />
+          </div>
+
+          <div class="rounded-xl overflow-hidden shadow-lg">
+            <img
+              src="imagens/img.5.jpeg "
+              class="w-full h-auto cursor-pointer gallery-image"
+            />
+          </div>
+
+          <div class="rounded-xl overflow-hidden shadow-lg">
+            <img
+              src="imagens/img.6.jpeg"
+              class="w-full h-auto cursor-pointer gallery-image"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Seção de Contato -->
+    <section id="contato" class="py-20 bg-white">
+      <div class="container mx-auto px-6">
+        <h2 class="text-4xl font-bold text-center mb-12 text-green-700">
+          Entre em Contato
+        </h2>
+        <div class="flex flex-wrap -mx-4">
+          <!-- Informações Institucionais -->
+          <div class="w-full lg:w-1/2 px-4 mb-8 lg:mb-0">
+            <div class="bg-green-100 rounded-xl p-8 shadow-lg h-full">
+              <h3 class="text-2xl font-bold mb-4 text-green-800">
+                Nossa Missão
+              </h3>
+              <p class="text-gray-700 leading-relaxed">
+                Acreditamos que a saúde e o bem-estar são direitos de todos.
+                Nossa missão é promover a qualidade de vida através de ações
+                sociais que transformam a realidade de comunidades em situação
+                de vulnerabilidade.
+              </p>
+              <div class="mt-6 text-gray-700">
+                <p>
+                  <strong>Email:</strong> contato@associacaoacontecer.com.br
+                </p>
+                <p><strong>Telefone:</strong>(12) 99137-9308</p>
+                <p>
+                  <strong>Endereço:</strong> Av. Professor José Santana de
+                  Castro, 100 Cruzeiro/SP -CEP 12730-120
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Formulário de Contato -->
+          <div class="w-full lg:w-1/2 px-4">
+            <div class="bg-gray-50 rounded-xl p-8 shadow-lg">
+              <h3 class="text-2xl font-bold mb-4 text-green-800">
+                Envie uma Mensagem
+              </h3>
+              <form id="contactForm">
+                <div class="mb-4">
+                  <label for="name" class="block text-gray-700 font-medium mb-2"
+                    >Nome Completo</label
+                  >
+                  <input
+                    type="text"
+                    id="name"
+                    name="name"
+                    class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500"
+                    required
+                  />
+                </div>
+                <div class="mb-4">
+                  <label
+                    for="email"
+                    class="block text-gray-700 font-medium mb-2"
+                    >Email</label
+                  >
+                  <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500"
+                    required
+                  />
+                </div>
+                <div class="mb-6">
+                  <label
+                    for="message"
+                    class="block text-gray-700 font-medium mb-2"
+                    >Mensagem</label
+                  >
+                  <textarea
+                    id="message"
+                    name="message"
+                    rows="4"
+                    class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500"
+                    required
+                  ></textarea>
+                </div>
+                <button
+                  type="submit"
+                  class="w-full bg-green-500 hover:bg-green-700 text-white font-bold py-3 px-4 rounded-lg transition duration-300"
+                >
+                  Enviar Mensagem
+                </button>
+              </form>
+              <div id="formMessage" class="mt-4 text-center hidden"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Seção de Doações -->
+    <section id="doacoes" class="py-20 bg-green-50">
+      <div class="container mx-auto px-6">
+        <h2 class="text-4xl font-bold text-center mb-12 text-green-700">
+          Como Ajudar
+        </h2>
+        <div class="grid md:grid-cols-2 gap-10">
+          <!-- Cartão de Doações Mensais -->
+          <div
+            class="bg-white rounded-xl shadow-lg p-8 transform hover:scale-105 transition duration-300"
+          >
+            <h3 class="text-2xl font-semibold mb-4 text-gray-800">
+              Doações mensais
+            </h3>
+            <p class="text-gray-600">
+              Se você quer ajudar, mas não consegue tempo para se doar em
+              presença física ensinando algo que você domine, ame ou gostaria de
+              passar para frente, você pode ajudar com o apadrinhamento e
+              contribuir com um valor mensal. Os valores recebidos serão para
+              ajudar a construir a sede da Associação Acontecer, bem como
+              ajudará a melhorar a qualidade dos serviços prestados.
+            </p>
+            <p class="text-gray-600 mt-4">
+              A contribuição pode ser feita via boleto bancário enviado por
+              e-mail ou via PIX.
+            </p>
+            <p class="text-gray-600 mt-2">
+              A chave do PIX é o nosso CNPJ <strong>20.115.915/0001-50</strong>
+            </p>
+            <p class="text-600 mt-4">
+              Para maiores informações ligue <strong>(12) 99137-9308</strong> ou
+              pelo email: <strong>doacao@associacaoacontecer.com.br</strong>
+            </p>
+          </div>
+          <!-- Cartão de Voluntariado -->
+          <div
+            class="bg-white rounded-xl shadow-lg p-8 transform hover:scale-105 transition duration-300"
+          >
+            <h3 class="text-2xl font-semibold mb-4 text-gray-800">
+              Voluntárias (os)
+            </h3>
+            <p class="text-gray-600">
+              Você quer dedicar um tempinho da sua vida para ajudar alguém? Sim?
+              Então venha ser voluntária (o).
+            </p>
+            <p class="text-gray-600 mt-4">
+              Desenvolva atividades com crianças e adolescentes (atividade-fim)
+              de teatro, circo, esportes, artes marciais, músicas, dança ou com
+              adultos em corte e costura, reciclagem, ginástica, entre outras.
+            </p>
+            <p class="text-gray-600 mt-4">
+              Caso queira se voluntariar de forma indireta (atividade-meio) como
+              eventos, captação de doações, doações de materiais, serviços,
+              entre em contato, toda ajuda é bem-vinda.
+            </p>
+            <p class="text-gray-600 mt-4">
+              Envie o seu projeto para o email:
+              <strong>contato@associacaoacontecer.org.br</strong>
+            </p>
+          </div>
+          <!-- Cartão de Doações Avulsas e Nota Fiscal -->
+          <div
+            class="md:col-span-2 bg-white rounded-xl shadow-lg p-8 transform hover:scale-105 transition duration-300"
+          >
+            <h3 class="text-2xl font-semibold mb-4 text-gray-800">
+              Doações avulsas
+            </h3>
+            <p class="text-gray-600">
+              Você também pode nos ajudar com doação avulsa. Estamos precisando
+              de materiais para construção, materiais, alimentos...
+            </p>
+            <p class="text-gray-600 mt-4">
+              Os mesmos podem ser entregues na nossa SEDE no endereço que consta
+              no final da página.
+            </p>
+            <h3 class="text-2xl font-semibold mt-8 mb-4 text-gray-800">
+              Doação da nota fiscal paulista
+            </h3>
+            <p class="text-gray-600 mt-4">
+              Você também pode nos ajudar com doação da nota fiscal paulista. A
+              doação pode ser realizada de forma automática pelo sistema da nota
+              fiscal paulista ou pelo portal da fazenda.
+            </p>
+            <p class="text-gray-600 mt-4">
+              <strong>Como fazer:</strong> Acesse o portal com login e senha,
+              selecione a opção doação automática com CPF, pesquise a
+              instituição favorita, por quanto tempo deseja realizar a doação e
+              confirma a doação automática.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Rodapé -->
+    <footer class="bg-gray-800 text-white py-8">
+      <div class="container mx-auto px-6 text-center">
+        <p>&copy; 2024 Associação Acontecer. Todos os direitos reservados.</p>
+        <p>
+          Desenvolvido por
+          <a href="#" class="text-green-400 hover:underline">Fabricio Lami</a>.
+        </p>
+
+        <!-- Redes Sociais -->
+        <div class="flex justify-center space-x-6 mb-4">
+          <!-- Facebook -->
+          <a
+            href="https://www.facebook.com/associacaoacontecer"
+            target="_blank"
+            class="hover:text-blue-500 transition-colors"
+          >
+            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+              <path
+                d="M22 12a10 10 0 10-11.5 9.9v-7h-2v-3h2v-2.3c0-2 1.2-3.1 3-3.1.9 0 1.8.1 2 .1v2.3h-1.1c-1.1 0-1.4.7-1.4 1.4V12h2.5l-.4 3h-2.1v7A10 10 0 0022 12z"
+              />
+            </svg>
+          </a>
+
+          <!-- Instagram -->
+          <a
+            href="https://www.instagram.com/associacaoacontecer"
+            target="_blank"
+            class="hover:text-pink-500 transition-colors"
+          >
+            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+              <path
+                d="M12 2.2c3.2 0 3.6 0 4.9.1 1.2.1 1.9.2 2.4.4.6.2 1 .5 1.5 1 .5.5.8.9 1 1.5.2.5.3 1.2.4 2.4.1 1.3.1 1.7.1 4.9s0 3.6-.1 4.9c-.1 1.2-.2 1.9-.4 2.4-.2.6-.5 1-1 1.5-.5.5-.9.8-1.5 1-.5.2-1.2.3-2.4.4-1.3.1-1.7.1-4.9.1s-3.6 0-4.9-.1c-1.2-.1-1.9-.2-2.4-.4-.6-.2-1-.5-1.5-1-.5-.5-.8-.9-1-1.5-.2-.5-.3-1.2-.4-2.4C2.2 15.6 2.2 15.2 2.2 12s0-3.6.1-4.9c.1-1.2.2-1.9.4-2.4.2-.6.5-1 1-1.5.5-.5.9-.8 1.5-1 .5-.2 1.2-.3 2.4-.4C8.4 2.2 8.8 2.2 12 2.2zm0-2.2C8.7 0 8.3 0 7 .1 5.7.2 4.7.4 3.9.8c-.8.4-1.5.9-2.1 1.5S.8 3.1.4 3.9C0 4.7-.2 5.7-.1 7 0 8.3 0 8.7 0 12s0 3.7.1 5c.1 1.3.3 2.3.7 3.1.4.8.9 1.5 1.5 2.1s1.3 1.1 2.1 1.5c.8.4 1.8.6 3.1.7 1.3.1 1.7.1 5 .1s3.7 0 5-.1c1.3-.1 2.3-.3 3.1-.7.8-.4 1.5-.9 2.1-1.5s1.1-1.3 1.5-2.1c.4-.8.6-1.8.7-3.1.1-1.3.1-1.7.1-5s0-3.7-.1-5c-.1-1.3-.3-2.3-.7-3.1-.4-.8-.9-1.5-1.5-2.1S19.3.8 18.5.4C17.7 0 16.7-.2 15-.3 13.7-.4 13.3-.4 12 0z"
+              />
+              <circle cx="12" cy="12" r="3.2" />
+            </svg>
+          </a>
+
+          <!-- WhatsApp -->
+          <a
+            href="https://wa.me/12991379308"
+            target="_blank"
+            class="hover:text-green-400 transition-colors"
+          >
+            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+              <path
+                d="M20.52 3.48A11.88 11.88 0 0012 0C5.37 0 .01 5.36.01 12a11.96 11.96 0 001.73 6.04L0 24l6.12-1.69A11.96 11.96 0 0012 24c6.63 0 12-5.36 12-12 0-3.2-1.25-6.2-3.48-8.52zm-8.53 17.33a9.73 9.73 0 01-5.22-1.5l-.37-.22-3.63 1 1-3.54-.24-.37a9.72 9.72 0 011.6-12.65 9.7 9.7 0 0113.75 0 9.7 9.7 0 010 13.74 9.73 9.73 0 01-6.89 2.54zm5.88-7.4c-.32-.16-1.9-.94-2.2-1.05-.3-.11-.52-.16-.74.16-.21.32-.83 1.05-1.02 1.27-.18.21-.37.24-.69.08-.32-.16-1.34-.49-2.55-1.57-.94-.83-1.57-1.85-1.76-2.17-.18-.32-.02-.49.14-.65.14-.14.32-.37.48-.56.16-.18.21-.32.32-.53.1-.21.05-.39-.03-.55-.08-.16-.74-1.77-1.02-2.42-.27-.63-.55-.55-.75-.56-.19 0-.41-.01-.63-.01-.21 0-.55.08-.84.39s-1.1 1.07-1.1 2.62 1.13 3.04 1.29 3.25c.16.21 2.23 3.42 5.4 4.79.76.33 1.35.53 1.81.68.76.25 1.45.21 1.99.13.61-.09 1.9-.78 2.17-1.53.27-.74.27-1.37.19-1.5-.08-.12-.3-.19-.63-.35z"
+              />
+            </svg>
+          </a>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      document
+        .getElementById("contactForm")
+        .addEventListener("submit", function (event) {
+          event.preventDefault();
+          const formData = new FormData(this);
+
+          fetch(" ", {
+            method: "POST",
+            body: formData,
+          })
+            .then((response) => response.text())
+            .then((data) => {
+              const messageElement = document.getElementById("formMessage");
+              if (data === "success") {
+                messageElement.textContent =
+                  "Mensagem enviada com sucesso! Agradecemos o seu contato.";
+                messageElement.classList.remove("hidden");
+                messageElement.classList.add("text-green-500");
+                this.reset();
+              } else {
+                messageElement.textContent =
+                  "Mensagem enviada com sucesso! Agradecemos o seu contato.";
+                messageElement.classList.remove("hidden");
+                messageElement.classList.add("text-green-500");
+              }
+            });
+        });
+    </script>
+
+    <div
+      id="lightbox"
+      class="fixed inset-0 bg-black bg-opacity-80 hidden items-center justify-center z-50"
+    >
+      <img
+        id="lightbox-img"
+        src=""
+        class="max-w-full max-h-full rounded-lg shadow-lg"
+      />
+      <script>
+        // Script para abrir a imagem em um lightbox
+        document.querySelectorAll(".gallery-image").forEach((img) => {
+          img.addEventListener("click", () => {
+            const lightbox = document.getElementById("lightbox");
+            const lightboxImg = document.getElementById("lightbox-img");
+            lightboxImg.src = img.src;
+            lightbox.classList.remove("hidden");
+            lightbox.classList.add("flex");
+          });
+        });
+
+        // Fechar o lightbox ao clicar fora da imagem
+        document.getElementById("lightbox").addEventListener("click", (e) => {
+          if (e.target.id === "lightbox") {
+            e.target.classList.add("hidden");
+            e.target.classList.remove("flex");
+          }
+        });
+      </script>
+    </div>
+  </body>
+</html>
